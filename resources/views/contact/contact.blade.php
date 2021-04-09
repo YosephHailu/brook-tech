@@ -1,4 +1,4 @@
-<div class="sptb bg-blue" id="contactUs" name="Booking">
+<div class="sptb bg-blue" name="Booking">
     <div class="appointment-container grey-shade parallax py-1 " id="bookInspection" name="bookInspection">
         <div class="row">
             <div class="col-md-6 ml-md-5 pl-md-5">
@@ -94,7 +94,7 @@
                                 </div>
                             </div>
 
-                            <button type="submit" class="btn btn-secondary" style="width: 100%" id="Service">
+                            <button  id="contactUs" type="submit" class="btn btn-secondary" style="width: 100%" id="Service">
                                 Send feedback
                             </button>
                         </form>

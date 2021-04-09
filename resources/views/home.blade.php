@@ -29,7 +29,7 @@
                                     <a class="social-icon" href=""><i class="fa fa-telegram"></i></a>
                                 </li>
                             </ul>
-                            <a class="btn btn-info mb-1 mt-1" href="#"><i class="fa fa-calender"></i> Book inspection appointment</a>
+                            <a class="btn btn-info mb-1 mt-1" href="#Booking"><i class="fa fa-calender"></i> Book inspection appointment</a>
                         </div>
                     </div>
                 </div>
@@ -49,13 +49,29 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 d-catmb mb-4 mb-lg-0">
                         <div class="d-flex">
                             <div>
-                                <span class="bg-secondary-transparent icon-service1 text-secondary">
-                                    <i class="ti ti-layers-alt"></i>
+                                <span class="bg-primary-transparent icon-service1 text-primary">
+                                    <i class="fa fa-car"></i>
                                 </span>
                             </div>
                             <div class="ml-4 mt-4">
-                                <h3 class=" mb-0 font-weight-bold">{{$configuration->updated_at->diffInDays(Carbon\Carbon::now()->addDays(1)) * $configuration->increment_by}}</h3>
+                                <h3 class=" mb-0 font-weight-bold">{{Carbon\Carbon::parse($configuration->updated_date)->diffInDays(Carbon\Carbon::now()->addDays(1)) * $configuration->increment_by}}</h3>
                                 <p class="mb-0 text-muted">Total Inspections</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 d-catmb mb-4 mb-sm-0">
+                        <div class="d-flex">
+                            <div>
+                                <span class="bg-primary-transparent icon-service1 text-primary">
+                                    <i class="fa fa-check"></i>
+                                </span>
+                            </div>
+                            <div class="ml-4 mt-4">
+                                @php
+                                $appointmentStatus = App\Models\AppointmentStatus::firstOrCreate(['status' => 'completed']);
+                                @endphp
+                                <h3 class=" mb-0 font-weight-bold">{{App\Models\Appointment::where('appointment_status_id', $appointmentStatus->id)->get()->count()}}</h3>
+                                <p class="mb-0 text-muted">Booked for inspection</p>
                             </div>
                         </div>
                     </div>
@@ -63,25 +79,12 @@
                         <div class="d-flex">
                             <div>
                                 <span class="bg-primary-transparent icon-service1 text-primary">
-                                    <i class="ti ti-star"></i>
+                                    <i class="fa fa-star"></i>
                                 </span>
                             </div>
                             <div class="ml-4 mt-4">
-                                <h3 class=" mb-0 font-weight-bold">6,854</h3>
+                                <h3 class=" mb-0 font-weight-bold">{{App\Models\Appointment::All()->count()}}</h3>
                                 <p class="mb-0 text-muted">Inspected using online booking</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 d-catmb mb-4 mb-sm-0">
-                        <div class="d-flex">
-                            <div>
-                                <span class="bg-warning-transparent icon-service1 text-warning">
-                                    <i class="ti ti-heart"></i>
-                                </span>
-                            </div>
-                            <div class="ml-4 mt-4">
-                                <h3 class=" mb-0 font-weight-bold">1,354</h3>
-                                <p class="mb-0 text-muted">Booked for inspection</p>
                             </div>
                         </div>
                     </div>
@@ -326,5 +329,42 @@
 {{-- Contact us section --}}
 @include('contact.contact')
 {{-- End contact us section --}}
+
+
+
+<section style="position: relative">
+    <div class="shade" style="position: absolute; background-color: rgba(0,0,0, 0.2); width: 100%; height: 100%; z-index: 1500;">
+        <div class="row" style=" height: 100%">
+        <div class="col-md-7"></div>
+        <div class="col-md-4  pt-5 ml-md-5 pl-md-5" style="background-color: rgba(0,0,0, 0.4);;">
+            <div class="container text-white">
+                <h1 class="display-4">
+                    Contact us
+                </h1>
+                <p class="mx-4">Want to get in touch, we love to hear from you, here is how you can reach to us.</p>
+            </div>
+
+            <div class="container" style="margin-top: 50px">
+                <div class="row px-2 text-muted text-center">
+                    <h6 class="text-warning col-8 mx-4 btn btn-outline-primary btn-outlined">
+                        <i class="fa fa-inbox px-1" aria-hidden="true"></i>
+                        broozera@gmail.com
+                    </h6>
+                    <h6 class="text-white col-5 mx-4 btn btn-outline-primary btn-outlined bg-warning">
+                        <i class="fa fa-phone px-1" aria-hidden="true"></i>
+                        +251-911-919-868
+                    </h6>
+
+                    <h6 class="text-white col-5 mx-4 btn btn-outline-primary btn-outlined bg-warning">
+                        <i class="fa fa-phone px-1" aria-hidden="true"></i>
+                        +251-912-618-530
+                    </h6>
+                </div>
+            </div></div>
+        </div>
+    </div>
+    <div id="map" class="map"></div>
+</section>
+
 
 @endsection

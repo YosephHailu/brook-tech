@@ -43,9 +43,6 @@ class PageController extends Controller
         $configuration->visitors = $configuration->visitors + 1;
         $configuration->save();
 
-        return $configuration;
-        return Carbon::now()->addDays(1)->diffInDays($configuration->updated_at);
-
         $feedbacks = Feedback::whereShare(true)->orderByDesc('created_at')->get();
         $photoGalleries = PhotoGallery::orderByDesc('updated_at')->get();
         $services = Service::orderByDesc('created_at')->get();
@@ -64,9 +61,11 @@ class PageController extends Controller
 
     public function updateConfiguration(Request $request)
     {
+        
         $config = Configuration::first();
         $config->total_inspection = $request->total_inspection;
         $config->increment_by = $request->increment_by;
+        $config->updated_date = Carbon::now();
         $config->save();
 
         return redirect()->back()->with('success', 'Successfully updated');

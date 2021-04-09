@@ -10964,8 +10964,8 @@ textarea[cols] {
 	text-align: center;
 }
 .chart, .map {
-	position: relative;
-	padding-top: 56.25%;
+	/* position: relative;
+	padding-top: 56.25%; */
 }
 .chart-square, .map-square {
 	padding-top: 100%;

@@ -53,14 +53,14 @@
                 <nav class="horizontalMenu clearfix d-md-flex bg-dark-transparent">
                     <ul class="horizontalMenu-list" style="background-color: #25236A; color: white">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#Subscribe">Subscribe </a></li>
+                        <li><a href="#Subscribe">Join us </a></li>
                         <li><a href="#AboutUs">About us </a></li>
                         <li><a href="#News">News </a></li>
                         <li><a href="#Booking">Booking </a></li>
                         <li><a href="#Services">Services </a></li>
                         <li><a href="#PhotoGallery">Gallery </a></li>
                         <li><a href="#Testimonials">Testimonials</a></li>
-                        <li><a href="#contactUs">Join us </a></li>
+                        <li><a href="#contactUs">Contact us </a></li>
                         <li class="d-lg-none mt-5 pb-5 mt-lg-0">
                             <span><a class="btn btn-orange" href="ad-list.html">Add Listing</a></span>
                         </li>

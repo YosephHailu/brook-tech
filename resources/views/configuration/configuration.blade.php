@@ -6,15 +6,15 @@
         <div class="p-3">
             <ul class="list my-3">
                 <li>
-                    <a href="#" class="btn footer-btn-outline btn-sm btn-pill bg-secondary mb-1">Total inspections : {{$config->updated_at->diffInDays(Carbon\Carbon::now()->addDays(1)) * $config->increment_by}}</a>
-                    <a href="#" class="btn footer-btn-outline btn-sm btn-pill bg-secondary mb-1">Increment by : {{$config->increment_by}}</a>
+                    <a href="#" class="btn footer-btn-outline btn-sm btn-pill bg-secondary mb-1">Total inspections : {{Carbon\Carbon::parse($config->updated_date ?? Carbon\Carbon::now())->diffInDays(Carbon\Carbon::now()->addDays(1)) * ($config->increment_by ?? 0)}}</a>
+                    <a href="#" class="btn footer-btn-outline btn-sm btn-pill bg-secondary mb-1">Increment by : {{$config->increment_by ?? 0}}</a>
                 </li>
             </ul>
             <form action="/configuration" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
-                    <input required value="{{$config->total_inspection}}" type="text" class="form-control col-4 mx-1" id="total_inspection" name="total_inspection" placeholder="Total inspection">
-                    <input required value="{{$config->increment_by}}" type="text" class="form-control col-4 mx-1" id="increment_by" name="increment_by" placeholder="Increment by">
+                    <input required value="{{$config->total_inspection ?? 0}}" type="text" class="form-control col-4 mx-1" id="total_inspection" name="total_inspection" placeholder="Total inspection">
+                    <input required value="{{$config->increment_by ?? 0}}" type="text" class="form-control col-4 mx-1" id="increment_by" name="increment_by" placeholder="Increment by">
                     <input type="submit" value="Save" class="btn btn-primary col-3 m-auto">
                 </div>
             </form>

@@ -13,12 +13,11 @@ class Configuration extends Model
         'visitors',
         'total_inspection',
         'increment_by',
+        'updated_date',
         'updated_at',
     ];
     
     public $date = [
-        'visitors',
-        'total_inspection',
-        'increment_by',
+        'updated_date',
     ];
 }

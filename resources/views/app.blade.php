@@ -49,6 +49,14 @@
     {{-- <script src="{{URL::asset('assets/js/ckeditor.js')}}"></script> --}}
 
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+    <style>
+      .map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+
     <style>
         .py-1 {
             padding: 10px 0px;
@@ -80,46 +88,6 @@
     <!--Footer Section-->
     @include('layouts.footer')
     <!--Footer Section-->
-
-    <!-- Report Modal -->
-    <div class="modal fade" id="report" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="examplereportLongTitle">Report Abuse</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="report-name" placeholder="Enter url">
-                    </div>
-                    <div class="form-group">
-                        <select name="country" id="select-countries2" class="form-control custom-select select2-no-search">
-                            <option value="1" selected>Categories</option>
-                            <option value="2">Spam</option>
-                            <option value="3">Identity Theft</option>
-                            <option value="4">Online Shopping Fraud</option>
-                            <option value="5">Service Providers</option>
-                            <option value="6">Phishing</option>
-                            <option value="7">Spyware</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="report-email" placeholder="Email Address">
-                    </div>
-                    <div class="form-group mb-0">
-                        <textarea class="form-control" name="example-textarea-input" rows="6" placeholder="Message"></textarea>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-success">Submit</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Back to top -->
     <a href="#top" id="back-to-top"><i class="fa fa-rocket"></i></a>
@@ -163,5 +131,32 @@
 
     <!-- Custom Js-->
     <script src="{{URL::asset('assets/js/custom.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+
+    <script type="text/javascript">
+        var map = new ol.Map({
+          target: 'map',
+          layers: [
+            new ol.layer.Tile({
+              source: new ol.source.OSM()
+            })
+          ],
+          view: new ol.View({
+            center: ol.proj.fromLonLat([38.7873, 9.0197]),
+            zoom: 16
+          })
+        });
+        var layer = new ol.layer.Vector({
+            source: new ol.source.Vector({
+                features: [
+                    new ol.Feature({
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([38.7873, 9.0198])),
+                        color: 'red'
+                    })
+                ],
+            })
+        });
+        map.addLayer(layer);
+      </script>
 </body>
 </html>

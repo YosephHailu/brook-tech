@@ -14,7 +14,7 @@
                 </div>
                 <div class="card-body">
                     <p class="card-text">
-                        {{$feedback->message}}
+                        {{Str::limit($feedback->message, 300, '...')}}
                     </p>
                     <div class="row px-3">
                         <div class="cat-item text-center">
