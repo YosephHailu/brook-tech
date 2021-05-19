@@ -23,13 +23,13 @@
                 <div class="container" style="margin-top: 50px">
                     <div class="row px-2 text-muted">
                         <h6 class="text-white col-5 mx-4 btn btn-outline-primary btn-outlined">
-                            <i class="fa fa-email px-1" aria-hidden="true"></i>
-                            +251-911-919-868
+                            <i class="fa fa-phone px-1" aria-hidden="true"></i>
+                            <a href="tel:+251-911-919-868" class="text-white px-1">+251-911-919-868</a>
                         </h6>
 
                         <h6 class="text-white col-5 mx-4 btn btn-outline-primary btn-outlined">
                             <i class="fa fa-at px-1" aria-hidden="true"></i>
-                            broozera@gmail.com
+                           <a href="https://gmail.com" class="text-white px-1"> broozera@gmail.com</a>
                         </h6>
                     </div>
                 </div>

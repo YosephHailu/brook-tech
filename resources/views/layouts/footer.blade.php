@@ -20,21 +20,22 @@
                             <li><a target="_blank" href="http://www.developmentaid.org"><i class="fa fa-angle-double-right mr-2 text-secondary"></i> Federal Road Transport Authority</a></li>
                             <li><a target="_blank" href="http://www.ZayRidewww.zayride.com"><i class="fa fa-angle-double-right mr-2 text-secondary"></i> ZayRide Ethiopia</a></li>
                             <li><a target="_blank" href="https://play.google.com/store/apps/details?id=com.multibrains.taxi.passenger.ridepassengeret&hl=en&gl=US"><i class="fa fa-angle-double-right mr-2 text-secondary"></i> Ride passenger app</a></li>
+                            <li><a target="_blank" href="https://drive.google.com/file/d/1ysuJQmYY1U6zfJs5ZaxqtWd7zvu6B4IX/view"><i class="fa fa-angle-double-right mr-2 text-secondary"></i> download our android application</a></li>
                         </ul>
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-12">
                         <h6 class="mt-6 mt-xl-0">Contact</h6>
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <a href="#"><i class="fa fa-home mr-3 text-secondary"></i>Ethiopia, Addis Ababa</a>
+                                <a href="https://en.wikipedia.org/wiki/Addis_Ababa"><i class="fa fa-home mr-3 text-secondary"></i>Ethiopia, Addis Ababa</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-envelope mr-3 fs-12 text-secondary"></i> broozera@gmail.com</a></li>
+                                <a href="https://gmail.com"><i class="fa fa-envelope mr-3 fs-12 text-secondary"></i> broozera@gmail.com</a></li>
                             <li>
-                                <a href="#"><i class="fa fa-phone mr-3 text-secondary"></i> +251-911-919-868, +251-912-618-530</a>
+                                <a href="tel:+251-911-919-868"><i class="fa fa-phone mr-3 text-secondary"></i> +251-911-919-868, +251-912-618-530</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-print mr-3 text-secondary"></i> +251-911-919-868, +251-912-618-530</a>
+                                <a href="tel:+251-912-618-530"><i class="fa fa-print mr-3 text-secondary"></i> +251-911-919-868, +251-912-618-530</a>
                             </li>
                         </ul>
                     </div>
@@ -64,14 +65,14 @@
                     <div class="col-lg-12 col-sm-12 text-center mb-2 mt-2">
                         <ul class="social-icons mb-0">
                             <li>
-                                <a class="social-icon" href=""><i class="fa fa-facebook"></i></a>
+                                <a class="social-icon" href="https://www.facebook.com/Brook-Tech-Annual-Inspection-Center-554503634678857"><i class="fa fa-facebook"></i></a>
                             </li>
                             <li>
                                 <a class="social-icon" href=""><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a class="social-icon" href=""><i class="fa fa-rss"></i></a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a class="social-icon" href=""><i class="fa fa-youtube"></i></a>
                             </li>

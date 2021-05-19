@@ -1,9 +1,10 @@
 
+
 <section class="sptb">
     <div class="container" id="PhotoGallery">
         <div class="section-title center-block text-center">
             <h2>Photo gallery</h2>
-            <p>Hard to forget such strong memories with the best people.</p>
+            <p>our workshop you can browse our wokshop images.</p>
         </div>
         <div class="row">
 

@@ -8,7 +8,7 @@
                             <div class="clearfix">
                                 <ul class="socials">
                                     <li>
-                                        <a class="social-icon text-dark" href="#"><i class="fa fa-facebook"></i></a>
+                                        <a class="social-icon text-dark" href="https://www.facebook.com/permalink.php?story_fbid=3123726671089861&id=554503634678857"><i class="fa fa-facebook"></i></a>
                                     </li>
                                     <li>
                                         <a class="social-icon text-dark" href="#"><i class="fa fa-twitter"></i></a>
@@ -44,10 +44,10 @@
         <div class="horizontal-main  bg-dark-transparent clearfix" style="background-color: #25236A">
             <div class="horizontal-mainwrapper container clearfix">
                 <div class="desktoplogo">
-                    <a href="{{url('/')}}"><img src="{{asset('assets/images/brand/logo2.png')}}" style="" class="mt-1" alt=""></a>
+                    <a href="{{url('/')}}"><img src="{{asset('assets/images/brand/blogo1.jpg')}}"   class="mt-1" alt=""></a>
                 </div>
                 <div class="desktoplogo-1">
-                    <a href="{{url('/')}}"><img src="{{asset('assets/images/brand/logo2.png')}}" alt="image" style="height: 40px"></a>
+                    <a href="{{url('/')}}"><img src="{{asset('assets/images/brand/blogo1.jpg')}}" alt="image" style="height: 40px"></a>
                 </div>
                 <!--Nav-->
                 <nav class="horizontalMenu clearfix d-md-flex bg-dark-transparent">

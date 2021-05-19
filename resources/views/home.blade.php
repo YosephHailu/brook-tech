@@ -13,7 +13,7 @@
                             <p>Driving any motor vehicle without a valid inspection sticker is a traffic violation. It may result in a fine and affect your insurance rate.</p>
                             <ul class="social-icons mb-4 ml-auto">
                                 <li>
-                                    <a class="social-icon" href=""><i class="fa fa-facebook"></i></a>
+                                    <a class="social-icon" href="https://www.facebook.com/Brook-Tech-Annual-Inspection-Center-554503634678857"><i class="fa fa-facebook"></i></a>
                                 </li>
                                 <li>
                                     <a class="social-icon" href=""><i class="fa fa-twitter"></i></a>
@@ -54,7 +54,10 @@
                                 </span>
                             </div>
                             <div class="ml-4 mt-4">
-                                <h3 class=" mb-0 font-weight-bold">{{Carbon\Carbon::parse($configuration->updated_date)->diffInDays(Carbon\Carbon::now()->addDays(1)) * $configuration->increment_by}}</h3>
+                                @php
+                                $allAppointments = App\Models\Appointment::All();
+                                @endphp
+                                <h3 class=" mb-0 font-weight-bold">{{Carbon\Carbon::parse($configuration->updated_date)->diffInDays(Carbon\Carbon::now()->addDays(1)) * $configuration->increment_by + $allAppointments->count()}}</h3>
                                 <p class="mb-0 text-muted">Total Inspections</p>
                             </div>
                         </div>
@@ -190,9 +193,9 @@
                             <div class="input-group col">
                                 <button class="btn text-white bg-secondary"><i class="fa fa-facebook"></i> </button>
                                 <div class="input-group-append">
-                                    <button type="button" class="btn text-white">
+                                    <a href="https://facebook.com"> <button type="button" class="btn text-white">
                                         Brooktech
-                                    </button>
+                                    </button></a>
                                 </div>
                             </div>
 
@@ -226,9 +229,8 @@
                             <div class="input-group col">
                                 <button class="btn text-white bg-secondary"><i class="fa fa-google-plus"></i> </button>
                                 <div class="input-group-append">
-                                    <button type="button" class="btn text-white">
-                                        broozera@gmail.com
-                                    </button>
+                                    <a href="mailto:broozera@gmail.com" class="btn text-white">
+                                        broozera@gmail.com</a>
                                 </div>
                             </div>
                         </div>
@@ -316,7 +318,7 @@
                     <div class="col-lg-2 col-md-3 col-sm-4">
                         <div class="bg-transparent status md-lg-0">
                             <img class="counter-icon " src="{{asset('storage/client/'.$client->image)}}" alt="" style="width: 150px; height: 150px">
-                            <h5>Total Listings</h5>
+                            <h5>{{$client->name}}</h5>
                         </div>
                     </div>
                     @endforeach
@@ -347,17 +349,17 @@
             <div class="container" style="margin-top: 50px">
                 <div class="row px-2 text-muted text-center">
                     <h6 class="text-warning col-8 mx-4 btn btn-outline-primary btn-outlined">
-                        <i class="fa fa-inbox px-1" aria-hidden="true"></i>
-                        broozera@gmail.com
+                      <a href="mailto:broozera@gmail.com" class="text-white text-left">  <i class="fa fa-inbox px-1" aria-hidden="true"></i>
+                        broozera@gmail.com</a>
                     </h6>
-                    <h6 class="text-white col-5 mx-4 btn btn-outline-primary btn-outlined bg-warning">
-                        <i class="fa fa-phone px-1" aria-hidden="true"></i>
-                        +251-911-919-868
+                    <h6 class="text-white col-lg-5 col-md-8 mx-4 btn btn-outline-primary btn-outlined bg-warning">
+                      <a href="tel:+251-911-919-868" class="text-white" > <i class="fa fa-phone px-1" aria-hidden="true"></i>
+                        +251-911-919-868</a>
                     </h6>
 
-                    <h6 class="text-white col-5 mx-4 btn btn-outline-primary btn-outlined bg-warning">
-                        <i class="fa fa-phone px-1" aria-hidden="true"></i>
-                        +251-912-618-530
+                    <h6 class="text-white col-lg-5 col-md-8 mx-4 btn btn-outline-primary btn-outlined bg-warning">
+                      <a href="tel:+251-912-618-530" class="text-white"> <i class="fa fa-phone px-1" aria-hidden="true"></i>
+                        +251-912-618-530</a>
                     </h6>
                 </div>
             </div></div>
