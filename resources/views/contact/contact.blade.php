@@ -36,8 +36,8 @@
             </div>
 
             <div class="col-md-5 container text-center">
-                <div class="col-md-10">
-                    <div class="float-right">
+                <div class="col-md-10 col-sm-12">
+                    <div class="float-md-right">
                         <h5 class="mb-4">
                             Write your feedback here
                         </h5>

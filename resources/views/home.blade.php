@@ -190,8 +190,10 @@
                         <h2 class="mb-2">Subscribe to our social media</h2>
                         <p class="fs-16 mb-0">It is a long established fact that a reader will be distracted by the readable.</p>
                         <div class=" row mt-5">
-                            <div class="input-group col">
+                            <div class="input-group col mt-2" style="min-width: 220px;">
+                                <div>
                                 <button class="btn text-white bg-secondary"><i class="fa fa-facebook"></i> </button>
+                                </div>
                                 <div class="input-group-append">
                                     <a href="https://facebook.com"> <button type="button" class="btn text-white">
                                         Brooktech
@@ -199,8 +201,10 @@
                                 </div>
                             </div>
 
-                            <div class="input-group col">
+                            <div class="input-group col mt-2" style="min-width: 220px;">
+                                <div>
                                 <button class="btn text-white bg-secondary"><i class="fa fa-telegram"></i> </button>
+                                </div>
                                 <div class="input-group-append">
                                     <button type="button" class="btn text-white">
                                         Brooktech
@@ -208,8 +212,10 @@
                                 </div>
                             </div>
 
-                            <div class="input-group col">
+                            <div class="input-group col mt-2" style="min-width: 220px;">
+                                <div>
                                 <button class="btn text-white bg-secondary"><i class="fa fa-twitter"></i> </button>
+                                </div>
                                 <div class="input-group-append">
                                     <button type="button" class="btn text-white">
                                         Brooktech
@@ -217,8 +223,10 @@
                                 </div>
                             </div>
 
-                            <div class="input-group col">
+                            <div class="input-group col mt-2" style="min-width: 220px;">
+                                <div>
                                 <button class="btn text-white bg-secondary"><i class="fa fa-youtube"></i> </button>
+                                </div>
                                 <div class="input-group-append">
                                     <button type="button" class="btn text-white">
                                         Brooktech
@@ -226,8 +234,10 @@
                                 </div>
                             </div>
 
-                            <div class="input-group col">
+                            <div class="input-group col mt-2" style="min-width: 220px;">
+                                <div>
                                 <button class="btn text-white bg-secondary"><i class="fa fa-google-plus"></i> </button>
+                                </div>
                                 <div class="input-group-append">
                                     <a href="mailto:broozera@gmail.com" class="btn text-white">
                                         broozera@gmail.com</a>
@@ -315,7 +325,7 @@
             <div class="container">
                 <div class="row text-center">
                     @foreach ($clients as $client)
-                    <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                         <div class="bg-transparent status md-lg-0">
                             <img class="counter-icon " src="{{asset('storage/client/'.$client->image)}}" alt="" style="width: 150px; height: 150px">
                             <h5>{{$client->name}}</h5>

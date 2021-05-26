@@ -31,11 +31,10 @@
         <div class="sticky">
             <div class="horizontal-header clearfix ">
                 <div class="container">
-                    <a href="{{url('/')}}" id="horizontal-navtoggle" class="animated-arrow"><span></span></a>
+                    <a href="#" id="horizontal-navtoggle" class="animated-arrow"><span></span></a>
                     <span class="smllogo"><a href="{{url('/')}}" class="d-flex logo-height logo-svg">
                             <img src="{{asset('assets/images/brand/logo.jpg')}}" style="max-height: 40px" alt="image"></a>
                     </span>
-                    <a href="ad-list.html" class="callusbtn"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
