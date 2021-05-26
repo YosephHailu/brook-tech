@@ -62,6 +62,19 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 d-catmb mb-4 mb-lg-0">
+                        <div class="d-flex">
+                            <div>
+                                <span class="bg-primary-transparent icon-service1 text-primary">
+                                    <i class="fa fa-star"></i>
+                                </span>
+                            </div>
+                            <div class="ml-4 mt-4">
+                                <h3 class=" mb-0 font-weight-bold">{{App\Models\Appointment::All()->count()}}</h3>
+                                <p class="mb-0 text-muted">Online bookings</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 d-catmb mb-4 mb-sm-0">
                         <div class="d-flex">
                             <div>
@@ -74,19 +87,6 @@
                                 $appointmentStatus = App\Models\AppointmentStatus::firstOrCreate(['status' => 'completed']);
                                 @endphp
                                 <h3 class=" mb-0 font-weight-bold">{{App\Models\Appointment::where('appointment_status_id', $appointmentStatus->id)->get()->count()}}</h3>
-                                <p class="mb-0 text-muted">Booked for inspection</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 d-catmb mb-4 mb-lg-0">
-                        <div class="d-flex">
-                            <div>
-                                <span class="bg-primary-transparent icon-service1 text-primary">
-                                    <i class="fa fa-star"></i>
-                                </span>
-                            </div>
-                            <div class="ml-4 mt-4">
-                                <h3 class=" mb-0 font-weight-bold">{{App\Models\Appointment::All()->count()}}</h3>
                                 <p class="mb-0 text-muted">Inspected using online booking</p>
                             </div>
                         </div>
